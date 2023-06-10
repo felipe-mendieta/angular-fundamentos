@@ -1,0 +1,25 @@
+<h1>Dragon Ball Z</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <!-- <app-personajes [arraypersonajes]="personajes">
+
+        </app-personajes> -->
+    <app-personajes
+      (onDeletePersonaje)="deletePersonaje($event)"
+    ></app-personajes>
+  </div>
+
+  <div class="col">
+    <!-- Utilizando OUTPUT -->
+    <!-- <app-agregar 
+        [personajePorDefecto]="personajePorDefecto"
+        (onNuevoPersonaje)="agregarNuevoPersonaje( $event)"
+
+      ></app-agregar> -->
+    <app-agregar
+      [personajePorDefecto]="personajeDefaultFromMainPageTS"
+    ></app-agregar>
+  </div>
+</div>

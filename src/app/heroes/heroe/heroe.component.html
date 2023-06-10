@@ -1,0 +1,24 @@
+<h1>Heroe:{{ nombre }}</h1>
+<!-- Descripcion list -->
+<label>Nombre a cambiar: </label>
+<input #newHero />
+<br />
+<label>Edad a cambiar: </label>
+<input #newAgeHero />
+
+<dl>
+  <dt>Nombre:</dt>
+  <dd>{{ nombre }}</dd>
+
+  <dt>Edad:</dt>
+  <dd>{{ edad }}</dd>
+
+  <dt>Funcion:</dt>
+  <dd>{{ obtenerNombre() }}</dd>
+
+  <dt>Capitalizado:</dt>
+  <dd>{{ nombreCapitalizado }}</dd>
+</dl>
+
+<button (click)="cambiarNombre(newHero.value)">Cambiar Heroe</button>
+<button (click)="cambiarEdad( newAgeHero.value)">Cambiar Edad</button>
